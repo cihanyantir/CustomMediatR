@@ -1,0 +1,12 @@
+
+###
+GET localhost:5257
+
+###
+POST localhost:5257/try
+Content-Type: application/json
+
+{
+  "name": "Burak Çok Sert",
+  "age": 42
+}

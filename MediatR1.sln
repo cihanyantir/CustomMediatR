@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatR1.Application", "MediatR1.Application\MediatR1.Application.csproj", "{FE994F9A-8915-4C41-AB17-EC99E11CFE19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatR1.API", "MediatR1.API\MediatR1.API.csproj", "{513C1A7F-48B8-465D-A4F6-C2485D03B308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatR1.Lib", "MediatR1.Lib\MediatR1.Lib.csproj", "{4E7F1E50-91F0-43DE-A47F-4B77CEDD4D6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE994F9A-8915-4C41-AB17-EC99E11CFE19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE994F9A-8915-4C41-AB17-EC99E11CFE19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE994F9A-8915-4C41-AB17-EC99E11CFE19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE994F9A-8915-4C41-AB17-EC99E11CFE19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513C1A7F-48B8-465D-A4F6-C2485D03B308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513C1A7F-48B8-465D-A4F6-C2485D03B308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513C1A7F-48B8-465D-A4F6-C2485D03B308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513C1A7F-48B8-465D-A4F6-C2485D03B308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E7F1E50-91F0-43DE-A47F-4B77CEDD4D6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E7F1E50-91F0-43DE-A47F-4B77CEDD4D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E7F1E50-91F0-43DE-A47F-4B77CEDD4D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E7F1E50-91F0-43DE-A47F-4B77CEDD4D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
