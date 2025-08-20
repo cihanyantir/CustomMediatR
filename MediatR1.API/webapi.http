@@ -1,5 +1,3 @@
-
-###
 GET localhost:5257
 
 ###
@@ -9,4 +7,12 @@ Content-Type: application/json
 {
   "name": "Burak Çok Sert",
   "age": 42
+}
+
+###
+POST localhost:5257/getId
+Content-Type: application/json
+
+{
+  "id" : 1
 }

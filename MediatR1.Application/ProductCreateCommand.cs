@@ -1,22 +1,29 @@
-using MediatR1.Lib;
+using MediatR1.Application.Models.Command;
+using MediatR1.Lib.Interfaces;
 
 namespace MediatR1.Application;
-
-public sealed class ProductCreateCommandRequest : IRequest
+internal sealed class ProductCreateCommandHandler : IRequestHandler<ProductCreateCommandRequest, ProductCreateCommandResponse>
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-}
-
-public sealed class ProductCreateCommandResponse
-{
-    public string Message { get; set; }
-}
-
-internal sealed class ProductCreateCommandHandler : IRequestHandler<ProductCreateCommandRequest>
-{
-    public Task Handle(ProductCreateCommandRequest request, CancellationToken cancellationToken)
+    public async Task<ProductCreateCommandResponse> Handle(ProductCreateCommandRequest request, CancellationToken cancellationToken)
     {
-        return Task.CompletedTask;
+        await Task.Delay(1000, cancellationToken);
+        
+        return new ProductCreateCommandResponse
+        {
+            Message = $"Product with ID {request.Id} and Name '{request.Name}' created successfully."
+        };
+    }
+}
+
+internal sealed class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQueryRequest, GetProductByIdQueryResponse>
+{
+    public async Task<GetProductByIdQueryResponse> Handle(GetProductByIdQueryRequest request, CancellationToken cancellationToken)
+    {
+        await Task.Delay(1000, cancellationToken);
+        
+        return new GetProductByIdQueryResponse
+        {
+            Name = $"Product Name for ID {request.Id}"
+        };
     }
 }

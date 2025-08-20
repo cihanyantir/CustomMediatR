@@ -1,4 +1,6 @@
 using System.Reflection;
+using MediatR1.Lib.Concrete;
+using MediatR1.Lib.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MediatR1.Lib;
@@ -10,7 +12,8 @@ public static class ServiceRegistrar
        
         var types = assembly.GetTypes().Where(t => t.IsClass && !t.IsInterface && !t.IsAbstract)
             .SelectMany(x=>
-                x.GetInterfaces().Where(y => y.IsGenericType && y.GetGenericTypeDefinition() == typeof(IRequestHandler<>))
+                x.GetInterfaces().Where(y => y.IsGenericType && (y.GetGenericTypeDefinition() == typeof(IRequestHandler<>) 
+                                                                 || y.GetGenericTypeDefinition() == typeof(IRequestHandler<,>)))
                     .Select(y => new
                     {
                         Interface = y,
